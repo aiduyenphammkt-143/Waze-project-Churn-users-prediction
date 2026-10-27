@@ -154,11 +154,11 @@ Then, the selected XGBoost model predicts on a seperating test set.
 
 | Model | Precision Score | Recall Score | F1 Score |
 |-----|-----|-----|-----|
-| Random Forest (Tuned) | 0.57 | 0.05 | 0.09 |
-| XGBoost (Tuned) | 0.40 | 0.18 | 0.25 |
-| Random Forest (Validation) | 0.43 | 0.04 | 0.08 |
-| XGBoost (Validation) | 0.37 | 0.17 | 0.23 |
-| XGBoost (Test Set) | 0.40 | 0.19 | 0.26 |
+| Random Forest (Tuned) | 0.49 | 0.10 | 0.17 |
+| XGBoost (Tuned) | 0.37 | 0.18 | 0.24 |
+| Random Forest (Validation) | 0.44 | 0.10 | 0.17 |
+| XGBoost (Validation) | 0.38 | 0.18| 0.25 |
+| XGBoost (Test Set) | 0.38 | 0.20 | 0.26 |
 
 ### Model Interpretation
 
