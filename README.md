@@ -162,6 +162,10 @@ Then, the selected XGBoost model predicts on a seperating test set.
 
 ### Model Interpretation
 
+* Among all evaluated models, **XGBoost delivered the strongest overall performance**, achieving the highest F1-score (0.26) and recall (20.1%) on the test dataset.
+* The model successfully identified meaningful churn patterns and consistently outperformed Random Forest during validation and testing.
+* However, **the model still misses a substantial proportion of churners** (405 false negatives vs. 102 true positives), indicating that predicting churn remains a challenging business problem with the current data.
+
 The most influential features driving churn prediction include:
 
 * Driving duration
@@ -171,4 +175,46 @@ The most influential features driving churn prediction include:
 * Distance per drive
 * Favorite destination usage
 
-These findings suggest that engagement consistency and driving behavior are stronger churn predictors than demographics or device type.
+**This suggests that churn is linked more closely to how users interact with the platform over time than to who the users are.**
+
+## 8. Repository Structure
+
+``` text
+├── analysis notebook/
+│   ├── Waze project lab_EDA & Visualization.ipynb
+│   │   └── Exploratory data analysis, data quality assessment, feature engineering, and visualization of user behavior patterns associated with churn.
+│   │
+│   ├── Waze project lab_Predictive modeling.ipynb
+│   │   └── Churn prediction workflow including model training, hyperparameter tuning, cross-validation, model evaluation, and feature importance analysis.
+│   │
+│   ├── RF_cv.pickle
+│   │   └── Tuned Random Forest model serialized for reuse and reproducibility.
+│   │
+│   └── XGB_cv.pickle
+│       └── Tuned XGBoost model serialized for deployment and future inference.
+│
+├── data/
+│   ├── waze_dataset.csv
+│   │   └── Raw user-level dataset provided for churn analysis.
+│   │
+│   ├── waze_dataset_processed.csv
+│   │   └── Cleaned and feature-engineered dataset used for modeling.
+│   │
+│   └── waze_data_dictionary.csv
+│       └── Data dictionary containing feature definitions and business interpretations.
+│
+└── README.md
+    └── Project overview, business context, methodology, model results, and business recommendations.
+```
+
+### Setup Instructions
+
+**Important:** The notebooks use relative file paths and expect all required files to be available in the same local workspace.
+
+1. Download all files from both the data/ and analysis notebook/ folders.
+2. Place all downloaded files into a single local directory while preserving the folder structure shown above.
+3. Open either notebook in Jupyter Notebook, JupyterLab, VS Code, or Google Colab.
+4. Run the notebooks sequentially:
+  * Waze project lab_EDA & Visualization.ipynb
+  * Waze project lab_Predictive modeling.ipynb
+5. Ensure the following Python packages are installed: numpy, pandas, matplotlib, seaborn, scikit-learn, xgboost, pickle
