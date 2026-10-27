@@ -1,0 +1,13 @@
+column_name,data_type,description,business_meaning
+label,object,Binary target variable (retained vs churned) indicating whether a user churned during the month,Outcome variable used to identify whether a user remains active or leaves the platform
+sessions,int,Number of times the user opened the app during the month,Measures app engagement frequency and habit formation
+drives,int,Number of drives (at least 1 km) completed during the month,Measures actual usage of Waze while driving
+device,object,Type of device used to start a session (iPhone or Android),Identifies behavioral differences across device ecosystems
+total_sessions,float,Model-estimated total number of sessions since onboarding,Represents a user's lifetime engagement with Waze
+n_days_after_onboarding,int,Number of days since the user signed up for the app,Represents user tenure and lifecycle stage
+total_navigations_fav1,int,Total navigations since onboarding to the user's favorite place 1,Measures recurring usage of primary favorite destination
+total_navigations_fav2,int,Total navigations since onboarding to the user's favorite place 2,Measures recurring usage of secondary favorite destination
+driven_km_drives,float,Total kilometers driven during the month,Captures driving intensity and dependence on the app
+duration_minutes_drives,float,Total driving duration in minutes during the month,Measures time spent actively using Waze while driving
+activity_days,int,Number of days the user opened the app during the month,Measures consistency of engagement throughout the month
+driving_days,int,Number of days the user drove at least 1 km during the month,Measures how frequently the user relies on Waze for driving activity
